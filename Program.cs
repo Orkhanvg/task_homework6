@@ -4,6 +4,8 @@ namespace PleaseGodHelpMeitistoughtask
 {
     class Program
     {
+        private static object price;
+
         static void Main(string[] args)
         {
             /*2.Product class
@@ -45,7 +47,7 @@ Eger daxil etdiyimiz deyer bu 3-unden basqa bir sey olarsa proqram bizden yenide
 
             Console.WriteLine("Please write how many books do you want?");
             int type_count = int.Parse(Console.ReadLine());
-            book[] book1s = new bohijjhi[type_count];
+            Book1s[] book1s = new Book1s[type_count];
             
             for (int i = 0; i < type_count; i++)
             {
@@ -61,7 +63,7 @@ Eger daxil etdiyimiz deyer bu 3-unden basqa bir sey olarsa proqram bizden yenide
                 Console.Write("Please enter the Price:  ");
                 double Price = int.Parse(Console.ReadLine());
 
-                book1s[i] = new book1s(Genre, No, Name, Price);
+                book1s[i] = new Book1s(Genre, No, Name, Price);
 
              
             }
@@ -94,15 +96,15 @@ Eger daxil etdiyimiz deyer bu 3-unden basqa bir sey olarsa proqram bizden yenide
 
                     for (int i = 0; i < book1s.Length; i++)
                     {
-                        book1 pr = new book1();
-                        pr.
+                        Book1s pr = new Book1s(double Price);
+                       
                         
                         
                         
                         
                         
 
-                        if 
+                        
                         
                         {
                             Console.WriteLine(0);
@@ -125,6 +127,22 @@ Eger daxil etdiyimiz deyer bu 3-unden basqa bir sey olarsa proqram bizden yenide
 
 
 
+        }
+    }
+
+    internal class Book1s
+    {
+        private string genre;
+        private int no;
+        private string name;
+        private double price;
+
+        public Book1s(string genre, int no, string name, double price)
+        {
+            this.genre = genre;
+            this.no = no;
+            this.name = name;
+            this.price = price;
         }
     }
 }
